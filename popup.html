@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Popup</title>
+        <style>
+            body {
+                width: 300px;
+                height: 300px; /* Increase the height to accommodate the image preview */
+                padding: 10px;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+                background-color: #F3F2EF;
+            }
+            #imageUpload {
+                display: none;
+            }
+            label {
+                display: inline-block;
+                padding: 10px;
+                background-color: #0073B1;
+                color: white;
+                cursor: pointer;
+                border-radius: 4px;
+                text-align: center;
+            }
+            #saveButton {
+                margin-top: 10px;
+                display: inline-block;
+                padding: 10px;
+                background-color: #0073B1;
+                color: white;
+                cursor: pointer;
+                border: none;
+                border-radius: 4px;
+                text-align: center;
+            }
+            /* Add styles for the image preview */
+            #previewImage {
+                display: block;
+                margin: 10px auto;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 2px solid #0073B1;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="imageUpload">Choose an image</label>
+        <input type="file" id="imageUpload" accept="image/*">
+        <!-- Add an image element for the preview -->
+        <img id="previewImage" alt="">
+        <button id="saveButton">Save</button>
+        <script src="popup.js"></script>
+    </body>
+</html>
